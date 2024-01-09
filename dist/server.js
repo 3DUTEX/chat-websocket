@@ -13,10 +13,8 @@ const serverHttp = _http2.default.createServer(app);
 
 const io = new (0, _socketio.Server)(serverHttp, {
   cors: {
-    origin: '*',
+    origin: 'http://localhost:3001',
   },
 });
-
-io.use(_cors2.default.call(void 0, ));
 
 exports.serverHttp = serverHttp; exports.io = io;
