@@ -1,4 +1,4 @@
-"use strict";var _server = require('../server');
+"use strict";var _server = require('./server');
 
 const users = [];
 

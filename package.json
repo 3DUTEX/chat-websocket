@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "build": "sucrase ./src -d ./Dir --transforms imports",
-    "start": "node index.js"
+    "dev": "nodemon ./src/index.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
