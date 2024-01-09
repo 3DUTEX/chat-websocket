@@ -17,6 +17,4 @@ const io = new Server(serverHttp, {
   },
 });
 
-io.use(cors());
-
 export { serverHttp, io };
