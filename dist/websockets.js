@@ -42,13 +42,10 @@ _server.io.on('connection', (socket) => {
       users.push(createUser(id, username, group)); // se não existir, cria
     }
 
-    console.log({
-      username,
-      id,
-    });
+    console.log(socket.id);
     socket.join(group); // Colocando usuário no grupo escolhido
     const oldMessages = getMessagesPerGroup(group);
-    callback(oldMessages);
+    if (oldMessages.length > 1) return callback(oldMessages);
   });
 
   socket.on('message', (data) => {
